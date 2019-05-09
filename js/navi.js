@@ -1,0 +1,19 @@
+$(function(){
+    $(".menu__navi-button").on("click",function(){
+        $(".navigation").stop().slideToggle();
+        $("#page").stop().slideToggle();
+        $(".menu").css({
+            "opacity":"0",
+            "visibility":"hidden"
+        });
+    });
+
+    $(".navigation__close").on("click",function(){
+        $(".navigation").stop().slideToggle();
+        $("#page").stop().slideToggle();
+        $(".menu").css({
+            "opacity":"1",
+            "visibility":"visible"
+        });
+    });
+});

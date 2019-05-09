@@ -1,0 +1,43 @@
+.success{
+    @include absCenter;
+    text-align: center;
+
+    &__icon{
+        fill:$color-primary-dark-1;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        font-weight:400;
+        color:rgba($color-black,.8);
+    }
+}
+
+.wrong{
+    @include absCenter;
+    text-align: center;
+
+    &__icon{
+        fill:$color-red;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        font-weight:400;
+        color:rgba($color-black,.8);
+    }
+}
+
+.question{
+    @include absCenter;
+    text-align: center;
+
+    h1{
+        font-size: 2.5rem;
+        font-weight:400;
+        color:rgba($color-black,.8);
+    }
+}
+
+
+

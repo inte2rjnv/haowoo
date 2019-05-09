@@ -1,0 +1,57 @@
+.prize{
+    padding:2rem 0;
+
+    &-card{
+            border-radius:8px;
+            box-shadow:0rem 2rem 4rem rgba($color-black,.25);
+            text-align: center;
+            padding:2rem 0;
+            margin:0 2rem;
+            transition: all .3s;
+
+            &-p1{
+                background-image:linear-gradient(
+                to right,
+                rgba($color-white,.2),
+                rgba($color-white,.2)),
+                url(../img/prize-1.jpg);
+                background-size: cover;
+            }
+
+            &-p2{
+                background-image:linear-gradient(
+                to right,
+                rgba($color-white,.2),
+                rgba($color-white,.2)),
+                url(../img/prize-2.jpg);
+                background-size: cover;
+            }
+
+            &-p3{
+                background-image:linear-gradient(
+                to right,
+                rgba($color-white,.2),
+                rgba($color-white,.2)),
+                url(../img/prize-3.jpg);
+                background-size: cover;
+            }
+
+        &__icon{
+            font-size:3rem;
+            color:$color-white;
+            display:inline-block;
+        }
+
+        &:hover{
+            transform: translateY(-5px);
+        }
+    }
+}
+
+.none{
+    background-color:$color-grey-dark;
+}
+
+.next{
+    background-color:#8bce85;
+}

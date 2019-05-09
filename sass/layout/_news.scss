@@ -1,0 +1,48 @@
+.news{
+    padding:4rem;
+
+    @include respond(tab-port){
+        padding:0rem 4rem;
+    }
+
+    &__table{
+        width:100%;
+        font-size: 2rem;
+        font-weight: 300;
+        border-collapse: collapse;
+
+        thead{
+            background-color: $color-black;
+            color:$color-white;
+            tr{
+                border-top:5px solid $color-primary-dark-1;
+                text-align: center;
+            
+                td + td{
+                    border-left:1px solid $color-white;
+                }
+
+                td:first-child{
+                    width:5rem;
+
+                    @include respond(phone){
+                        width:3rem;
+                    }
+                }
+                td:nth-child(2){
+                    width:18rem;
+
+                    @include respond(phone){
+                        width:10rem;
+                    }
+                }
+            } 
+        }
+
+        tbody{
+            tr{
+                border-bottom:1px solid $color-grey-light;
+            }
+        }
+    }
+}

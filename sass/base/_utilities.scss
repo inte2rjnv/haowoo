@@ -1,0 +1,30 @@
+//COLORS
+.color-white {color: $color-white !important;}
+
+//ALIGN
+.u-center-text{text-align: center !important;}
+
+//MARGIN
+.margin-bottom-small{margin-bottom:1.5rem !important;}
+.margin-bottom-medium{margin-bottom:3rem !important;}
+.margin-bottom-large{margin-bottom:5rem !important;
+    @include respond(tab-port){
+        margin-bottom:3rem !important;
+    }
+}
+
+
+.margin-top-small{margin-top:1.5rem !important;}
+.margin-top-medium{margin-top:3rem !important;}
+.margin-top-large{margin-top:5rem !important;
+    @include respond(phone){
+        margin-top:3rem !important;
+    }
+}
+.margin-top-largest{margin-top:10rem !important;}
+.margin-top-giant{margin-top:12rem !important;}
+
+.padding-left-8{padding-left:7.5% !important;}
+
+
+

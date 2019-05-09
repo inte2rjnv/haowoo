@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,700,900&amp;subset=chinese-traditional" rel="stylesheet">
+
+        <!-- <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <link rel="stylesheet" href="css/lightbox.css"> -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <!-- <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css"> -->
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    
+        
+        <title>HaoWoo - 好屋</title>
+    </head>
+    <body>
+        <nav class="navigation u-center-text">
+            <div class="navigation__logo-box">
+                    <a href="index.html"><img src="img/logo-white.png" alt="Logo" class="navigation__logo"></a>
+            </div>
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#about" class="scroll">關於HaoWoo</a></li>
+                <li class="navigation__item"><a href="#book" class="scroll">客房資訊</a></li>
+                <li class="navigation__item"><a href="#news" class="scroll">最新消息</a></li>
+                <li class="navigation__item"><a href="#contact" class="scroll">聯絡我們</a></li>
+                <li class="navigation__item">
+                    <a href="signup.html"><span>加入會員</span></a>
+                    <a href="login.html"><span>會員登入</span></a>
+                </li>
+            </ul>
+            <div class="navigation__close">&Cross;</div>
+        </nav>
+        
+        <div id="page"></div>
+        <div class="menu">
+            <div class="logo-box">
+                <a href="index.html"><img src="img/logo-white.png" alt="Logo" class="menu__logo"></a>
+            </div>
+
+            <div class="menu__navigation">
+                <ul>
+                    <li class="menu__list"><a href="#about" class="scroll">關於HaoWoo</a></li>
+                    <li class="menu__list"><a href="#book" class="scroll">客房資訊</a></li>
+                    <li class="menu__list"><a href="#news" class="scroll">最新消息</a></li>
+                    <li class="menu__list"><a href="#contact" class="scroll">聯絡我們</a></li>
+                </ul>
+            </div>
+
+            <div class="menu__members">
+                    <li class="menu__member-signup"><a href="signup.html">加入會員</a></li>
+                    <li class="menu__member-login"><a href="login.html">會員登入</a></li>
+            </div>
+            <div class="menu__navi-button">
+                <span class="menu__navi-button-icon">&nbsp;</span>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="header__slider">
+                <div class="header_up">
+                    <img src="img/room_a.jpg" alt="Header image 1" class="header__img">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main">Modern room</span>
+                        <span class="heading-primary--sub">現代質感&nbsp;&nbsp;&nbsp;美不勝收</span>
+                        <a href="#" class="btn btn-black">了解更多</a>
+                    </h1>
+                </div>
+                <div class="header_up">
+                    <img src="img/room_b.jpg" alt="Header image 2" class="header__img">
+                    <h1 class="heading-primary color-white">
+                        <span class="heading-primary--main">好品質 是我們的使命</span>
+                        <span class="heading-primary--sub">最舒適&nbsp;&nbsp;&nbsp;最充足</span>
+                        <a href="#" class="btn btn-blue">了解更多</a>
+                    </h1>
+                </div> 
+                <div class="header_up">
+                    <img src="img/room_c.jpg" alt="Header image 3" class="header__img">
+                </div>  
+            </div>   
+        </header>
+        <div class="media_rp u-center-text">
+            <div class="title-text">
+                媒體報導
+            </div>
+            <div class="media_rp__logo">
+                <img src="img/media-logo-1.png" alt="Media logo 1">
+                <img src="img/media-logo-2.png" alt="Media logo 2">
+                <img src="img/media-logo-3.png" alt="Media logo 3">
+                <img src="img/media-logo-4.png" alt="Media logo 4">
+                <img src="img/media-logo-5.png" alt="Media logo 5">
+                <img src="img/media-logo-6.png" alt="Media logo 6">
+            </div>
+        </div>
+
+        <section class="prize margin-bottom-large">
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="prize-card prize-card-p1" id="double">
+                            <i class="prize-card__icon icon-basic-elaboration-todolist-star"></i>
+                            <h3 class="heading-secondary margin-bottom-small">雙人房限時$1399</h3>
+                            <a href="javascript:;" class="btn btn-get check">即刻領取<span>(數量有限，領完為止)</span></a>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="prize-card prize-card-p2" id="gym">
+                            <i class="prize-card__icon icon-basic-elaboration-todolist-star"></i>
+                            <h3 class="heading-secondary margin-bottom-small">健身中心2人同行1人免費</h3>
+                            <a href="javascript:;" class="btn btn-get check">即刻領取<span>(數量有限，領完為止)</span></a>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="prize-card prize-card-p3" id="meal">
+                            <i class="prize-card__icon icon-basic-elaboration-todolist-star"></i>
+                            <h3 class="heading-secondary margin-bottom-small">高級餐點NT$300折抵券</h3>
+                            <a href="javascript:;" class="btn btn-get check">即刻領取<span>(數量有限，領完為止)</span></a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <main>
+            <section class="about" id="about">
+                <div class="title-text u-center-text margin-bottom-large">
+                    關於HaoWoo
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary">You are going to fall in love with it</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Consectetur adipiscing elit pellentesque habitant morbi tristique.
+                        </p>
+                        <h3 class="heading-tertiary">Live adventures like you never have before</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed augue lacus viverra. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Orci nulla pellentesque dignissim enim sit. Nisl tincidunt eget nullam non nisi est sit amet.
+                        </p>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="about__img">
+                            <img src="img/about-2.jpg" alt="About photo 1" class="about__img--p1">
+                            <img src="img/about-1.jpg" alt="About photo 2" class="about__img--p2">
+                        </div> 
+                    </div>
+                </div>
+            </section>
+
+            <section class="book" id="book">
+                <div class="title-text u-center-text margin-bottom-large">
+                    客房資訊
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="book-card">
+                            <div class="book-card__side book-card__side--front">
+                                <div class="book-card__picture book-card__picture--1">
+                                    &nbsp;
+                                </div>
+                                <h4 class="book-card__heading">
+                                    精緻雙人房
+                                </h4>
+                                <div class="book-card__details">
+                                    <ul>
+                                        <li>附贈中式自助式早餐</li>
+                                        <li>28吋LED數位電視</li>
+                                        <li>進口衛浴設備</li>
+                                        <li>吹風機、高級沐浴用品</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="book-card__side book-card__side--back"> 
+                                <div class="book-card__cta">
+                                    <div class="book-card__price-box">
+                                        <p class="book-card__price-text">定價</p>
+                                        <p class="book-card__price-value">NT$2200</p>
+                                    </div>
+                                </div>
+                                <div class="book-card__btn">
+                                    <a href="#popup" class="book-card__btn--visible">Book now</a>
+                                    <a href="#popup" class="book-card__btn--invisible">我要訂房</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="book-card">
+                            <div class="book-card__side book-card__side--front">
+                                <div class="book-card__picture book-card__picture--2">
+                                    &nbsp;
+                                </div>
+                                <h4 class="book-card__heading">
+                                   豪華雙人房
+                                </h4>
+                                <div class="book-card__details">
+                                    <ul>
+                                        <li>附贈中式自助式早餐</li>
+                                        <li>32吋LED數位電視</li>
+                                        <li>進口衛浴設備</li>
+                                        <li>客房迷你冰箱</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="book-card__side book-card__side--back">
+                                <div class="book-card__cta">
+                                    <div class="book-card__price-box">
+                                        <p class="book-card__price-text">定價</p>
+                                        <p class="book-card__price-value">NT$2400</p>
+                                    </div>
+                                </div>
+                                <div class="book-card__btn">
+                                    <a href="#popup" class="book-card__btn--visible">Book now</a>
+                                    <a href="#popup" class="book-card__btn--invisible">我要訂房</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="book-card">
+                            <div class="book-card__side book-card__side--front">
+                                <div class="book-card__picture book-card__picture--3">
+                                    &nbsp;
+                                </div>
+                                <h4 class="book-card__heading">
+                                    雅緻三人房
+                                </h4>
+                                <div class="book-card__details">
+                                    <ul>
+                                        <li>附贈中西自助式早餐</li>
+                                        <li>42吋LED數位電視</li>
+                                        <li>獨立控制空調系統</li>
+                                        <li>進口衛浴設備</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="book-card__side book-card__side--back">
+                                <div class="book-card__cta">
+                                    <div class="book-card__price-box">
+                                        <p class="book-card__price-text">定價</p>
+                                        <p class="book-card__price-value">NT$3300</p>
+                                    </div>
+                                </div>
+                                <div class="book-card__btn">
+                                    <a href="#popup" class="book-card__btn--visible">Book now</a>
+                                    <a href="#popup" class="book-card__btn--invisible">我要訂房</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                    <div class="col-1-of-3">
+                        <div class="book-card">
+                            <div class="book-card__side book-card__side--front">
+                                <div class="book-card__picture book-card__picture--4">
+                                    &nbsp;
+                                </div>
+                                <h4 class="book-card__heading">
+                                    溫馨四人房
+                                </h4>
+                                <div class="book-card__details">
+                                    <ul>
+                                        <li>附贈中西自助式早餐</li>
+                                        <li>房內附咖啡及迎賓點心</li>
+                                        <li>50吋LED數位電視</li>
+                                        <li>頂級空調及衛浴設備</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="book-card__side book-card__side--back">
+                                <div class="book-card__cta">
+                                    <div class="book-card__price-box">
+                                        <p class="book-card__price-text">定價</p>
+                                        <p class="book-card__price-value">NT$3900</p>
+                                    </div>
+                                </div>
+                                <div class="book-card__btn">
+                                    <a href="#popup" class="book-card__btn--visible">Book now</a>
+                                    <a href="#popup" class="book-card__btn--invisible">我要訂房</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="book-card">
+                            <div class="book-card__side book-card__side--front">
+                                <div class="book-card__picture book-card__picture--5">
+                                    &nbsp;
+                                </div>
+                                <h4 class="book-card__heading">
+                                    豪華四人房
+                                </h4>
+                                <div class="book-card__details">
+                                    <ul>
+                                        <li>附贈中西自助式早餐</li>
+                                        <li>房內附咖啡及迎賓點心</li>
+                                        <li>56吋LED數位電視</li>
+                                        <li>頂級空調及衛浴設備</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="book-card__side book-card__side--back">
+                                <div class="book-card__cta">
+                                    <div class="book-card__price-box">
+                                        <p class="book-card__price-text">定價</p>
+                                        <p class="book-card__price-value">NT$5200</p>
+                                    </div>
+                                </div>
+                                <div class="book-card__btn">
+                                    <a href="#popup" class="book-card__btn--visible">Book now</a>
+                                    <a href="#popup" class="book-card__btn--invisible">我要訂房</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="book-card">
+                            <div class="book-card__side book-card__side--front">
+                                <div class="book-card__picture book-card__picture--6">
+                                    &nbsp;
+                                </div>
+                                <h4 class="book-card__heading">
+                                    豪華六人房
+                                </h4>
+                                <div class="book-card__details">
+                                    <ul>
+                                        <li>附贈中西自助式早餐</li>
+                                        <li>房內附咖啡及迎賓點心</li>
+                                        <li>60吋LED數位電視</li>
+                                        <li>頂級空調及衛浴設備</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="book-card__side book-card__side--back">
+                                <div class="book-card__cta">
+                                    <div class="book-card__price-box">
+                                        <p class="book-card__price-text">定價</p>
+                                        <p class="book-card__price-value">NT$5900</p>
+                                    </div>
+                                </div>
+                                <div class="book-card__btn">
+                                    <a href="#popup" class="book-card__btn--visible">Book now</a>
+                                    <a href="#popup" class="book-card__btn--invisible">我要訂房</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news" id="news">
+                <div class="title-text u-center-text margin-bottom-large margin-top-small">
+                    最新消息
+                </div>
+                
+                <div class="row">
+                    <table class="news__table">
+                        <thead>
+                            <tr>
+                                <td>類別</td>
+                                <td>日期</td>
+                                <td>標題</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="u-center-text">歡迎大家</td>
+                                <td class="u-center-text">這邊是</td>
+                                <td>這邊是</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <div class="title-text u-center-text margin-bottom-large margin-top-small">
+                    聯絡我們
+                </div>
+
+                <div class="row">
+                    <div class="contact__main">
+                        <div class="contact__form">
+                            <form action="#" class="form">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="請填入您的姓名" id="name" required>
+                                    <label for="name" class="form__label">您的姓名</label>
+                                </div>
+
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="請填入您的電子信箱" id="email" required>
+                                    <label for="email" class="form__label">您的電子郵件</label>
+                                </div>
+
+                                <div class="form__group">
+                                    <textarea id="comment" class="form__textarea" placeholder="請留下您的訊息" rows="8" cols="80" required></textarea>
+                                    <label for="comment" class="form__label">您的訊息</label>
+                                </div>
+
+                                <div class="form__group">
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" id="male" name="sex">
+                                        <label for="male" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            男
+                                        </label>
+                                    </div>
+
+                                    <div class="form__radio-group">
+                                        <input type="radio" class="form__radio-input" id="female" name="sex">
+                                        <label for="female" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            女
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form__group margin-top-large">
+                                    <button type="submit" class="form__btn ">送出</button>
+                                    <button type="reset" class="form__btn ">清除重填</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery margin-top-medium">
+                    <figure class="gallery__item gallery__item--1"><img src="img/gal-1.jpg" alt="Gallery image 1" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--2"><img src="img/gal-2.jpg" alt="Gallery image 2" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--3"><img src="img/gal-3.jpg" alt="Gallery image 3" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--4"><img src="img/gal-4.jpg" alt="Gallery image 4" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--5"><img src="img/gal-5.jpg" alt="Gallery image 5" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--6"><img src="img/gal-6.jpg" alt="Gallery image 6" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--7"><img src="img/gal-7.jpg" alt="Gallery image 7" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--8"><img src="img/gal-8.jpg" alt="Gallery image 8" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--9"><img src="img/gal-9.jpg" alt="Gallery image 9" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--10"><img src="img/gal-10.jpg" alt="Gallery image 10" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--11"><img src="img/gal-11.jpg" alt="Gallery image 11" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--12"><img src="img/gal-12.jpg" alt="Gallery image 12" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--13"><img src="img/gal-13.jpg" alt="Gallery image 13" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--14"><img src="img/gal-14.jpg" alt="Gallery image 14" class="gallery__img"></figure>
+                </section>
+        </main>
+
+        <footer class="footer">
+            <div class="row">
+                <div class="col-1-of-2">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">關於HaoWoo</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">客房資訊</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">最新消息</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-1-of-2">
+                      <p class="footer__copyright">
+                            Copyright &copy; Haowoo CO.,LTD. All Rights Reserved. 網頁設計 │ HaoWoo
+                      </p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__imgBox">
+                    <a href="img/popup-1.jpg" data-lightbox="pic" class="popup__link"><img src="img/popup-1.jpg" alt="Tour photo" class="popup__img"></a>
+                    <a href="img/popup-2.jpg" data-lightbox="pic" class="popup__link"><img src="img/popup-2.jpg" alt="Tour photo" class="popup__img"></a>
+                    <a href="img/popup-3.jpg" data-lightbox="pic" class="popup__link"><img src="img/popup-3.jpg" alt="Tour photo" class="popup__img"></a>
+                </div>  
+                <div class="popup__detail">  
+                    <h4 class="heading-fourth padding-left-8 margin-bottom-small">精緻雙人房</h4>
+                    <ul class="popup__list">
+                        <li class="popup__item">附贈中西自助式早餐</li>
+                        <li class="popup__item">房內附咖啡、茗茶及迎賓點心</li>
+                        <li class="popup__item">32吋LED數位電視</li>
+                        <li class="popup__item">國內外多頻道衛星節目</li>
+                        <li class="popup__item">無線/有線寬頻上網系統</li>
+                        <li class="popup__item">獨立控制空調系統</li>
+                        <li class="popup__item">進口衛浴設備</li>
+                        <li class="popup__item">羽毛枕、羽毛被</li>
+                        <li class="popup__item">客房迷你冰箱</li>
+                        <li class="popup__item">吹風機、高級沐浴用品</li>
+                        <li class="popup__item">※本飯店不接受攜帶寵物進入※</li>
+                        <li class="popup__item">※全館禁止吸煙(房間內皆禁煙)※</li>
+                    </ul>   
+                </div>
+                <a href="javascript:;" class="popoup__btn">下一步 &rarr;</a>
+                <a href="#book" class="popup__close">&times;</a>
+            </div>
+        </div>
+
+        <div class="gototop">
+            <a href="#" class="gototop__link">
+                <svg class="gototop__icon">
+                    <use xlink:href="img/sprite.svg#icon-arrow-bold-up"></use>
+                </svg>
+            </a> 
+        </div>
+    </body>
+</html>
+<script src="js/slick.min.js"></script>
+<script src="js/header_slick.js"></script> 
+<script src="js/menushrink.js"></script>
+<script src="js/navi.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/gototop.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/scrollLink.js"></script>
+
+
+
+
+
+       
+        

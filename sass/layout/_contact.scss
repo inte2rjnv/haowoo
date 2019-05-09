@@ -1,0 +1,192 @@
+.contact{
+    padding:5rem 0 10rem 0;
+
+    @include respond(tab-port){
+        padding: 2rem 0 3rem 0;
+    }
+
+    &__main{
+        background-image: 
+            linear-gradient(to right,
+            rgba($color-white, .8) 0%,
+            rgba($color-white, .8) 60%,
+            transparent 60%),
+            url(../img/contact.jpg);
+        
+        background-size: 100%;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+        @include respond(tab-land){
+            background-size:cover;
+        }
+
+        @include respond(tab-port){
+            background-image: 
+            linear-gradient(to right,
+            rgba($color-white, .8) 0%,
+            rgba($color-white, .8) 100%),
+            url(../img/contact.jpg);
+        }
+
+    }
+
+    &__form{
+        width:60%;
+        padding:4rem;
+
+        @include respond(tab-port){
+            width:100%;
+            padding:2rem;
+        }
+    }
+}
+
+.form{
+
+    &__input{
+        font-size: 1.5rem;
+        font-family: inherit;
+        color:inherit;
+        font-weight: 300;
+        padding:1rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white,.7);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .1);
+        border:none;
+        width:90%;
+        display:block;
+        transition: all .3s;
+
+        @include respond(tab-port){
+            width:100%;
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom:2px solid $color-primary;
+        }
+
+        &:focus:invalid{
+            border-bottom:2px solid #ff7730;
+        }
+
+        &::-webkit-input-placeholder{
+            color:$color-grey-dark-1;
+        }
+    }
+
+   
+
+    &__textarea{
+        font-size: 1.5rem;
+        font-family: inherit;
+        color:inherit;
+        font-weight: 300;
+        padding:1rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white,.7);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .1);
+        border:none;
+        min-height:23vh;
+        width:90%;
+        display:block;
+        transition: all .3s;
+
+        @include respond(tab-port){
+            width:100%;
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom:2px solid $color-primary;
+        }
+
+        &:focus:invalid{
+            border-bottom:2px solid #ff7730;
+        }
+
+        &::-webkit-input-placeholder{
+            color:$color-grey-dark-1;
+        }
+
+    }
+
+    &__label{
+        font-size:1.4rem;
+        font-weight:400;
+        color:rgba($color-black,.7);
+        margin-bottom:.5rem;
+        margin-left:2rem;
+        display:block;
+        transition:all .3s;
+    }
+
+    &__input:placeholder-shown + &__label,
+    &__textarea:placeholder-shown + &__label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-3.6rem);
+
+    }
+
+    &__radio-group{
+        width:25%;
+        display:inline-block;
+
+        @include respond(phone){
+            width:100%;
+            margin-top:2rem;
+        }
+    }
+
+    &__radio-input{
+        display: none;
+    }
+
+    &__radio-label{
+        color:rgba($color-grey-dark,.9);
+        font-size: 2rem;
+        font-weight:300;
+        cursor: pointer;
+        position: relative;
+        padding-left:4rem;
+
+        @include respond(tab-port){
+            font-size: 3rem;
+        }
+    }
+
+    &__radio-button{
+        height:3rem;
+        width:3rem;
+        border:3px solid $color-primary;
+        border-radius: 50%;
+        display:inline-block;
+        position: absolute;
+        left:0;
+        top:-.3rem;
+
+        &::after{
+            content:'';
+            display:block;
+            height:1.2rem;
+            width:1.2rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+            opacity:0;
+            transition:all .2s;
+            @include absCenter;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after{
+        opacity: 1;
+    }
+
+    &__group:last-child{
+        text-align: center;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,700,900&amp;subset=chinese-traditional" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    
+        
+        <title>HaoWoo - 好屋 後台管理系統</title>
+    </head>
+    <body>
+        <div class="bg-image">    
+            <div class="login">
+                <div class="login__logobox">
+                    <img src="img/logo-white.png" alt="Logo" class="login__logo">
+                </div> 
+                <div class="login__title">後臺管理系統</div>
+                <a href="index.html" class="login__home">前台網站&nbsp;&rarrhk; </a>
+            </div>
+
+            <div class="add-content">
+                <form ACTION="" id="form1" name="form1" method="POST" class="form1">
+                    <div class="form1__title u-center-text">&nbsp;<span>新增新聞</span></div>
+
+                    <p style="margin-left:20%;">
+                    <label for="news_member_kind">主題分類：</label>
+                        <select name="news_member_kind" id="news_member_kind">
+                          <option value="閒聊">閒聊</option>
+                          <option value="公告">公告</option>
+                          <option value="求助">求助</option>
+                          <option value="徵求">徵求</option>
+                        </select>
+                    </p>
+
+                    <p style="margin-left:20%;">
+                        <label for="news_topic">標題：</label>
+                        <input type="text" name="news_topic" id="news_topic">
+                    </p>
+                    <p style="margin-left:20%;">
+                        <label for="news_date">日期：</label>
+                        <input type="date" name="news_date" id="news_date">
+                    </p>                         
+                    <p style="margin-left:20%;">
+                        <label for="news_msg" style="vertical-align: top;">新聞內容：</label>
+                        <textarea name="news_msg" id="news_msg"></textarea>
+                    </p>
+                    <p class=" u-center-text">
+                        <input type="submit" name="submit" id="submit" value="送出">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </body> 
+</html>
+
+
+
+       
+        

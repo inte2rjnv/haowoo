@@ -1,0 +1,82 @@
+.about{
+    padding:5rem 2rem 8rem;
+    background-image:linear-gradient(
+        rgba($color-white,.7),    
+        rgba($color-white,.7)),
+        url(../img/about.jpg);
+    background-size:cover;
+    transform: skewY(-3deg);
+    margin-bottom:8rem;
+
+    @include respond(tab-land){
+        padding:5rem 2rem 4rem;
+        margin-bottom:3rem;
+    }
+
+    @include respond(tab-port){
+        padding-left:0;
+        margin-bottom:0;
+    }
+
+    @include respond(phone){
+        padding:2rem;
+    }
+
+    & > *{
+        transform: skewY(3deg);
+    }
+
+    &__img{
+        position: relative;
+        margin-top:2rem;
+
+        @include respond(tab-port){
+            margin-top:0;
+        }
+
+        img{
+            position: absolute;
+            width:60%;
+            display:block;
+            border-radius: 50%;
+            box-shadow: 1rem 2rem 4rem rgba(0,0,0,.2);
+            z-index: 10;
+            transition: all .3s;
+
+            @include respond(tab-port){
+                float:left;
+                position: relative;
+                width:50%;
+            }
+
+            &:hover{
+                transform: scale(1.05);
+                z-index: 20;
+            }
+        }
+
+        &:hover img:not(:hover){
+            transform: scale(.95);
+        }
+
+        &--p1{
+            top:-3rem;
+            right:0;
+
+            @include respond(tab-port){
+                top:0;
+                left:10%;
+            }
+        }
+
+        &--p2{
+            top:0;
+            left:5rem;
+
+            @include respond(tab-port){
+                top:0;
+                left:-10%;
+            }
+        }
+    }
+}

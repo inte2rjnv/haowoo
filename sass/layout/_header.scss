@@ -1,0 +1,19 @@
+.header {
+    position: relative;
+    width: 100%; 
+    overflow: hidden;
+  
+      &__slider{
+          margin-left: -50px;
+          margin-right: -50px;
+  
+        .header_up {
+            position: relative; 
+            
+        }           
+    }
+  
+      &__img{
+          width: 100%;
+    }
+}

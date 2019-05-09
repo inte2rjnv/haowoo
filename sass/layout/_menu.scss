@@ -1,0 +1,171 @@
+.menu{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    width:100%;
+    height:6rem;
+    position:fixed;
+    top:0;
+    z-index:1 ;
+    transition: all .3s ease .1s;
+
+    @include respond(tab-port){
+        background-color: $color-black;
+    }
+
+    @include respond(tab-port){
+        height: 4rem;
+    }
+
+    .logo-box{
+        margin-left:2rem;
+        margin-top:.5rem;
+    }
+
+    &__logo {
+        height: 4.8rem; 
+
+        @include respond(tab-port){
+        height: 3rem;        
+        }
+    }
+
+    &:hover{
+        background-color: $color-black;
+    }
+
+    &__navigation {
+        flex:0 0 70%;
+
+        @include respond(tab-land){
+            flex:0 0 60%;
+        }
+
+        @include respond(tab-port){
+            display:none;
+        }
+        
+        ul{
+            display:flex;
+            list-style: none;
+            align-items: center;
+
+            
+        }
+    }
+
+    &__list{
+        height:6rem;
+        line-height: 6rem;
+        
+        a{
+            font-size:2rem;
+            font-weight: 300;
+            display: block;
+            padding:0 2rem;
+            text-decoration: none;
+            color:rgba($color-white,.9);
+            transition: all .3s;
+
+            &:hover{
+                background-color: rgba($color-white,.08);
+                color:$color-primary-light-1;
+            }
+        }
+
+        &.active{
+            background-color:rgba($color-white,.08);
+        }
+    }
+
+    &__members{
+        display:flex;
+        align-items: center;
+        
+        @include respond(tab-port){
+            display:none;
+        }
+
+        li{
+            list-style: none;
+            height:6rem;
+            line-height: 6rem;
+
+            a{
+                text-decoration: none;
+                font-size: 1.8rem;
+                color:$color-white;
+                padding:0 1rem;
+                display:block;
+            }
+            
+            a:hover{
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    &__navi-button{
+        width:2.5rem;
+        height:2.5rem;
+        border:1px solid rgba($color-white,.8);
+        border-radius:3px;
+        text-align: center;
+        margin-right:2rem;
+        cursor: pointer;
+        display:none;
+
+        @include respond(tab-port){
+            display:block;
+        }
+   
+
+        &-icon{
+            position: relative;
+            background-color:rgba($color-white,.8);
+            width:1.8rem;
+            height:2px;
+            display:inline-block;
+            top:5px;
+
+            &::before,
+            &::after{
+                content:'';
+                display:block;
+                position: absolute;
+                background-color:rgba($color-white,.8);
+                width:1.8rem;
+                height:2px;
+            }
+
+            &::before{
+                top:8px;
+            }
+
+            &::after{
+                top:16px;
+            }
+
+        }
+    }
+}
+
+
+.menu.shrink {
+    background-color: $color-black;
+    height:5rem;
+    transition: all ease .5s;
+
+    .menu__navigation li,
+    .menu__members li{
+        height:4.8rem;
+        line-height:4.8rem;
+    }
+
+    .menu__logo{
+        height:3rem;
+    }
+}
+
+
+

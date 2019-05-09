@@ -1,0 +1,277 @@
+.book{
+        background-color:rgba($color-grey-dark,.05);
+        margin-top:-14rem;
+        padding-top:14rem;
+        padding-bottom:8rem;
+
+        @include respond(tab-land){
+            padding-bottom:4rem;
+        }
+
+        @include respond(tab-port){
+            margin-top:0rem;
+            padding-top:2rem;
+            padding-bottom:0rem;
+        }
+
+        @include respond(phone){
+            padding-bottom:2rem;
+        }
+
+        &-card{
+            perspective: 150rem;
+            -moz-perspective: 150rem;
+            position: relative;
+            height:36rem;
+            margin:1rem 2rem;
+
+            @include respond(tab-land){
+                height:35rem;
+                margin:1rem 1rem;
+            }
+
+            @include respond(tab-port){
+                height:33rem
+            }
+
+            &__side{  
+                height:36rem;
+                transition:all .8s ease;
+                position: absolute;
+                top:0;
+                left:0;
+                width:100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                box-shadow: 0rem 2rem 4rem rgba(#000,.15);
+
+                @include respond(tab-land){
+                    height:35rem
+                }
+
+                @include respond(tab-port){
+                    height:33rem
+                }
+
+                &--front{
+                    background-color: $color-white;
+                }
+
+                &--back{
+                    background-color:$color-black;
+                    color:$color-white;
+                    border-top:5px solid $color-primary-dark-1;
+                    transform: rotateY(180deg);
+                    
+                }
+            }
+
+        &:hover &__side--front{
+            transform: rotateY(-180deg);
+        }
+
+        &:hover &__side--back{
+            transform: rotateY(0deg);
+        }
+
+        //FRONT
+        &__picture{
+            background-size: cover;
+            height:16rem;
+
+            @supports (clip-path:polygon(0 0)) or (-webkit-clip-path:polygon(0 0)){
+                -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+                height:18rem;
+            }
+
+            &--1{
+                background-image:url(../img/book-1.jpg);
+            }
+
+            &--2{
+                background-image: url(../img/book-2.jpg);
+            }
+
+            &--3{
+                background-image: url(../img/book-3.jpg);
+            }
+
+            &--4{
+                background-image: url(../img/book-4.jpg);
+            }
+
+            &--5{
+                background-image: url(../img/book-5.jpg);
+            }
+
+            &--6{
+                background-image: url(../img/book-6.jpg);
+            }
+
+        }
+
+        &__details{
+
+            ul{
+                list-style: none;
+                width:70%;
+                margin:0 auto;
+
+                li{
+                    text-align: center;
+                    font-size:$default-font-size;
+                    font-weight:400;
+                    padding:1rem;
+
+                    &:not(:last-child){
+                        border-bottom:1px solid $color-grey-light;
+                    }
+                }
+            }
+        }
+
+        &__cta{
+            @include absCenter;
+            width:100%;
+        }
+
+        &__price-box{
+            text-align: center;
+        }
+
+        &__price-text{
+            font-size: 2rem;
+            font-weight: 100;
+        }
+
+        &__price-value{
+            font-size:4rem;
+            font-weight: 100;
+        }
+
+        &__btn{
+            position: relative;
+            bottom:calc(-100% + 4rem);
+            text-align:center;
+            width:100%;
+            height: 4rem;
+            line-height: 4rem;
+            overflow: hidden;
+            background-color: $color-primary;
+
+            & > *{
+                &:link,
+                &:visited{
+                position: absolute;
+                text-decoration: none;
+                list-style: none;
+                color:$color-white;
+                font-size:2.4rem;
+                width:100%;
+                display:block;
+                transition: all .3s;
+                }    
+            }
+            &--invisible{
+                top:-100%;
+            }
+
+            &:hover{
+
+                .book-card__btn--invisible{
+                    top:0;
+                }
+
+                .book-card__btn--visible{
+                    transform:translateY(100%)
+                }
+            }
+        }    
+    }
+
+    // @include respond(tab-port){
+        @media only screen and (max-width:56.25em),
+               only screen and (hover:none){
+            &-card{
+                height:auto;
+                box-shadow: 0rem 2rem 4rem rgba(#000,.15);
+
+                &__side{  
+                    height:auto;
+                    position: relative;
+                    box-shadow: none;
+
+                    &--back{
+                        background-color:$color-white;
+                        color:$color-black;
+                        border-top:0px solid $color-primary-dark-1;
+                        transform: rotateY(0);
+                        
+                    }
+                }
+
+            &:hover &__side--front{
+                transform: rotateY(0);
+            }
+
+            &__cta{
+                position: relative;
+                top:0%;
+                left:0%;
+                transform: translate(0);
+                width:100%;
+                padding:2rem 0;
+            }
+
+            &__btn{
+                position: relative;
+                bottom:calc(-100% + 4rem);
+                text-align:center;
+                width:100%;
+                height: 4rem;
+                line-height: 4rem;
+                overflow: hidden;
+                background-color: $color-primary;
+
+                & > *{
+                    &:link,
+                    &:visited{
+                    position: absolute;
+                    text-decoration: none;
+                    list-style: none;
+                    color:$color-white;
+                    font-size:2.4rem;
+                    width:100%;
+                    display:block;
+                    transition: all .3s;
+                    }    
+                }
+                &--invisible{
+                    top:0%;
+                }
+
+                &--visible{
+                    top:100%;
+                }
+            }    
+        }
+    }
+
+    .row{
+        @include respond(tab-port){
+            max-width:100% !important;
+        }    
+    }
+
+    .col-1-of-3{
+        @include respond(tab-port){
+            width:50% !important;
+        }
+
+        @include respond(phone){
+            width:100% !important;
+        }
+    }
+}
+

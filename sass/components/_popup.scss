@@ -1,0 +1,139 @@
+.popup{
+    height:100vh;
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:55;
+    background-color:rgba(0,0,0,.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    &__content{
+        @include absCenter;
+        width:60%;
+        background-color: $color-white;
+        box-shadow:0 2rem 4rem rgba($color-black,.9);
+        position: relative;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.15);
+        transition: all .4s .2s;
+        
+        @include clearfix;
+    }
+
+    &__imgBox{
+        font-size: 0;
+    }
+
+    &__link{
+        position: relative;
+        display: inline-block;
+        width:33.333333%;
+
+        &::before{
+            content:'';
+            display:block;
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            margin:auto;
+            background-color:rgba($color-black,.5);
+        }
+
+        &::after{
+            font-family: 'themify';
+            content:'\e611';
+            display:block;
+            @include absCenter;
+            font-size:3rem;
+            color:$color-grey-light;
+        }
+    }
+
+    &__img{
+        display:inline-block;
+        width:100%;
+
+    }
+
+    &__detail{
+        @include respond(tab-port){
+            text-align: center;
+        }
+    }
+
+    &__list{
+        list-style: none;
+        font-size: 0;
+        display:inline-block;
+        text-align:left;
+        padding-right:8%;
+
+        @include respond(tab-port){
+            padding-right:0;
+        }
+    }
+
+    &__item{
+        font-size:$default-font-size;
+        display: inline-block;
+        width:50%;
+        padding-left:8%;
+
+        @include respond(tab-port){
+            width:100%;
+            display: block;
+            padding-left:0;
+        }
+
+        &::before {
+            font-family: 'themify';
+            content: '\e649';
+            display:inline-block;
+            margin-right:1rem;
+            font-size:.2rem;
+            color:$color-primary-dark-1;
+        }
+    }
+
+    //Open popup
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content{
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__close{
+        &:link,
+        &:visited{
+            position: absolute;
+            top:-1rem;
+            right:-1rem;
+            width:3.5rem;
+            height:3.5rem;
+            line-height: 3.5rem;
+            font-size: 3rem;
+            display: inline-block;
+            text-decoration: none;
+            color:$color-white;
+            background-color: $color-primary;
+            border-radius: 50%;
+            text-align: center;
+            transition: all .3s;
+            backface-visibility: hidden;
+
+        }
+
+        &:hover{
+            transform: rotateZ(180deg);
+        }
+    }
+}
